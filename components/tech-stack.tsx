@@ -6,7 +6,7 @@ const technologies = [
   { name: "JavaScript", icon: JavaScriptIcon },
   { name: "Next.js", icon: NextjsIcon },
   { name: "Tailwind CSS", icon: TailwindIcon },
-  { name: "Python", icon: TailwindIcon },
+  { name: "Python", icon: PythonIcon },
 ];
 
 export function TechStack() {
@@ -19,7 +19,7 @@ export function TechStack() {
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
           {technologies.map((tech, i) => (
             <SectionObserver key={tech.name} delay={i * 80}>
-              <div className="glass-card glass-card-hover flex items-center gap-3 rounded-xl px-5 py-4 transition-all duration-300 hover:scale-[1.03]">
+              <div className="glass-card glass-card-hover flex items-center gap-3 rounded-xl px-5 py-4 h-full transition-all duration-300 hover:scale-[1.03]">
                 <tech.icon className="h-6 w-6 shrink-0" />
                 <span className="text-sm font-medium text-foreground">
                   {tech.name}
@@ -69,6 +69,14 @@ function TailwindIcon({ className }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="#06B6D4">
       <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z" />
+    </svg>
+  );
+}
+
+function PythonIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="#3776AB">
+      <path d="M12 2.1c-4.2 0-5.2 1.8-5.2 4.1v3.1h5.2v.9H5.5c-2.3 0-4.3 1.4-4.9 4-.7 2.9.2 5.3 2.4 5.3h2.8v-2.4c0-2.5 2.2-4.7 4.7-4.7h4.7c2.1 0 3.7-1.7 3.7-3.8V6.2c0-2.8-2.4-4.1-5.2-4.1zm-2.8 2.1c.8 0 1.4.7 1.4 1.5 0 .8-.6 1.4-1.4 1.4-.8 0-1.4-.6-1.4-1.4 0-.8.6-1.5 1.4-1.5zM18.9 9v2.5c0 2.7-2.2 4.8-4.8 4.8H9.4c-2 0-3.7 1.8-3.7 3.8v3.2c0 2.8 2.6 3.8 5.2 3.8 3.1 0 5.2-1.3 5.2-4.1v-3h-5.1v-1h8.5c2.3 0 3.5-1.8 4.1-4.2.6-2.5-.1-5.1-2.6-5.1h-1.1zm-3.6 9.5c.8 0 1.4.6 1.4 1.4 0 .8-.6 1.4-1.4 1.4-.8 0-1.4-.6-1.4-1.4 0-.7.6-1.4 1.4-1.4z" />
     </svg>
   );
 }
