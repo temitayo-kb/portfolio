@@ -12,7 +12,13 @@ export const metadata: Metadata = {
   title: "Temitayo Olawoye | Frontend Developer",
   description:
     "Frontend developer portfolio showcasing projects built with React and modern web technologies.",
-  generator: "v0.app",
+  metadataBase: new URL("https://olawoyetemitayo.vercel.app"),
+  openGraph: {
+    title: "Temitayo Olawoye | Frontend Developer",
+    description:
+      "Frontend developer portfolio showcasing projects built with React and modern web technologies.",
+    type: "website",
+  },
   icons: {
     icon: [
       {
@@ -20,12 +26,8 @@ export const metadata: Metadata = {
         media: "(prefers-color-scheme: light)",
       },
       {
-        url: "/icon-dark-32x32.png",
+        url: "/icon-light-32x32.png",
         media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
       },
     ],
     apple: "/apple-icon.png",

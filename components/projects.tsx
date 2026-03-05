@@ -5,7 +5,8 @@ import { SectionObserver } from "./section-observer";
 const projects = [
   {
     title: "Netflip",
-    description: "A front-end clone of the Netflix user interface.",
+    description:
+      "Netflip is a Netflix clone built with React and Firebase, featuring user authentication, multi-profile management, and dynamic content browsing",
     image: "/images/project-1.png",
     tech: ["React", "Javascript", "CSS", "Firebase"],
     liveUrl: "https://netflip-app.vercel.app/",

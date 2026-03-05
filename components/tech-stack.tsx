@@ -2,8 +2,9 @@ import { SectionObserver } from "./section-observer";
 
 const technologies = [
   { name: "React", icon: ReactIcon },
-  { name: "TypeScript", icon: TypeScriptIcon },
   { name: "JavaScript", icon: JavaScriptIcon },
+  { name: "CSS", icon: PythonIcon },
+  { name: "TypeScript", icon: TypeScriptIcon },
   { name: "Next.js", icon: NextjsIcon },
   { name: "Tailwind CSS", icon: TailwindIcon },
   { name: "Python", icon: PythonIcon },
@@ -19,7 +20,8 @@ export function TechStack() {
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
           {technologies.map((tech, i) => (
             <SectionObserver key={tech.name} delay={i * 80}>
-              <div className="glass-card glass-card-hover flex items-center gap-3 rounded-xl px-5 py-4 h-full transition-all duration-300 hover:scale-[1.03]">
+              {/* <div className="glass-card glass-card-hover flex items-center gap-3 rounded-xl px-5 py-4 h-full transition-all duration-300 hover:scale-[1.03]"> */}
+              <div className="glass-card glass-card-hover flex items-center gap-3 rounded-xl px-5 py-4 h-full min-h-20 transition-all duration-300 hover:scale-[1.03]">
                 <tech.icon className="h-6 w-6 shrink-0" />
                 <span className="text-sm font-medium text-foreground">
                   {tech.name}
@@ -77,6 +79,14 @@ function PythonIcon({ className }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="#3776AB">
       <path d="M12 2.1c-4.2 0-5.2 1.8-5.2 4.1v3.1h5.2v.9H5.5c-2.3 0-4.3 1.4-4.9 4-.7 2.9.2 5.3 2.4 5.3h2.8v-2.4c0-2.5 2.2-4.7 4.7-4.7h4.7c2.1 0 3.7-1.7 3.7-3.8V6.2c0-2.8-2.4-4.1-5.2-4.1zm-2.8 2.1c.8 0 1.4.7 1.4 1.5 0 .8-.6 1.4-1.4 1.4-.8 0-1.4-.6-1.4-1.4 0-.8.6-1.5 1.4-1.5zM18.9 9v2.5c0 2.7-2.2 4.8-4.8 4.8H9.4c-2 0-3.7 1.8-3.7 3.8v3.2c0 2.8 2.6 3.8 5.2 3.8 3.1 0 5.2-1.3 5.2-4.1v-3h-5.1v-1h8.5c2.3 0 3.5-1.8 4.1-4.2.6-2.5-.1-5.1-2.6-5.1h-1.1zm-3.6 9.5c.8 0 1.4.6 1.4 1.4 0 .8-.6 1.4-1.4 1.4-.8 0-1.4-.6-1.4-1.4 0-.7.6-1.4 1.4-1.4z" />
+    </svg>
+  );
+}
+
+function CssIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="#1572B6">
+      <path d="M4.2 2.1h15.6l-1.4 15.8-6.4 1.8-6.4-1.8L4.2 2.1zm12.1 5.5l.2-2.2H7.4l.4 4.4h6.9l-.3 3.1-2.3.6h-.1l-2.3-.6-.2-2h-2.2l.2 3.6 4.3 1.2 4.4-1.2.5-5.6H9.9l-.2-2.1h8.2l.2.2z" />
     </svg>
   );
 }
