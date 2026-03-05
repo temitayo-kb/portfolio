@@ -18,6 +18,14 @@ export const metadata: Metadata = {
     description:
       "Frontend developer portfolio showcasing projects built with React and modern web technologies.",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Temitayo Olawoye | Frontend Developer",
+      },
+    ],
   },
   icons: {
     icon: [
@@ -26,7 +34,7 @@ export const metadata: Metadata = {
         media: "(prefers-color-scheme: light)",
       },
       {
-        url: "/icon-light-32x32.png",
+        url: "/icon-dark-32x32.png",
         media: "(prefers-color-scheme: dark)",
       },
     ],
